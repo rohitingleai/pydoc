@@ -102,7 +102,7 @@
             display: none; /* Hide the sidebar by default */
             flex-direction: column; /* Display menu items in a column */
             overflow-y: auto; /* Add vertical scrollbar when content exceeds the height */
-            max-height: 83vh; /* Limit the maximum height to 80% of the viewport height */
+            max-height: 86vh; /* Limit the maximum height to 80% of the viewport height */
         }
 
         .sidebar-left.active {
