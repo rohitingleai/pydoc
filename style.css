@@ -1,0 +1,290 @@
+/* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #000000; /* Updated background color */
+            color: #fff; /* Updated text color */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style the search bar container */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style the search input container */
+        .search-input {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%; /* Make the input container responsive */
+            max-width: 400px; /* Limit the maximum width for larger screens */
+            background-color: #0d0d0d; /* Dark background color */
+            overflow: hidden;
+            margin-left: 20px; /* Add margin to separate from logo */
+        }
+
+        /* Style the search input */
+        input[type="search"] {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            font-size: 14px;
+            background-color: transparent; /* Remove white background */
+            color: #fff; /* White text color */
+            width: 100%; /* Make the input responsive */
+            outline: none; /* Remove outline on focus */
+        }
+
+        /* Style the navigation menu for mobile */
+        #menu-btn {
+            display: none; /* Hide the menu button by default */
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column; /* Display the menu items in a column */
+            background-color: #fff;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide the navigation menu by default */
+        }
+
+        nav ul.active {
+            display: flex; /* Show the navigation menu when active */
+        }
+
+        nav ul li {
+            margin: 0;
+            padding: 10px 20px; /* Add padding to menu items */
+        }
+
+        /* Style the main content area and columns */
+        .container {
+            margin-top: 70px; /* Make space for the fixed header */
+            margin-bottom: 70px; /* Make space for the fixed footer */
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Style the left sidebar (vertical menu) */
+        .sidebar-left {
+            width: 20%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: none; /* Hide the sidebar by default */
+            flex-direction: column; /* Display menu items in a column */
+            overflow-y: auto; /* Add vertical scrollbar when content exceeds the height */
+            max-height: 83vh; /* Limit the maximum height to 80% of the viewport height */
+        }
+
+        .sidebar-left.active {
+            display: flex; /* Show the sidebar when active */
+        }
+
+        .sidebar-left a {
+            text-decoration: none;
+            color: #333;
+            margin: 5px 0; /* Add space between menu items */
+            background-color: #eee;
+            padding: 12px;
+            font-size: 1.075em;
+        }
+
+        .sidebar-left a:hover {
+            background-color: #ccc;
+        }
+
+        .sidebar-left a.active {
+            background-color: #000000;
+            color: white;
+            font-size: 1.0em;
+        }
+
+        /* Style the main content */
+        .main-content {
+            width: 65%;
+            background-color: #fff;
+            padding: 10px;
+            margin: 0 auto;
+            font-family: "Roboto";
+            font-size: 17.5px;
+            line-height: 1.4;
+            text-align: justify;
+        }
+
+        /* Style headings (h1, h2, h3, etc.) */
+        .main-content h1 {
+            font-size: 24px; /* Large heading font size */
+            color: #000; /* Heading color */
+            margin-bottom: 20px; /* Spacing below headings */
+        }
+        .main-content h2 {
+            font-size: 21px; /* Medium heading font size */
+            margin-bottom: 15px;
+        }
+
+        .main-content h3 {
+            font-size: 19px; /* Small heading font size */
+            margin-bottom: 10px;
+        }
+
+        .main-content h4 {
+            font-size: 17px; /* Small heading font size */
+            margin-bottom: 10px;
+        }
+
+        /* Style paragraphs */
+        .main-content p {
+            margin-bottom: 20px; /* Spacing between paragraphs */
+        }
+
+
+
+
+
+
+
+
+        /* Style the right sidebar */
+        .sidebar-right {
+            width: 25%;
+            background-color: #f0f0f0;
+            top: 60px;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            padding: 10px;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #000000; /* Updated background color */
+            color: #fff; /* Updated text color */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack columns in a single column */
+            }
+
+            .sidebar-left,
+            .main-content,
+            .sidebar-right {
+                width: 100%; /* Make columns full-width */
+            }
+
+            #menu-btn {
+                display: block; /* Display the menu button */
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #000000; /* Button background color */
+                color: #fff; /* Button text color */
+                font-size: 24px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+            }
+
+            .sidebar-left.active {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                bottom: 0;
+                display: flex; /* Show the sidebar when active */
+            }
+
+            footer {
+                display: none; /* Hide the footer in mobile mode */
+            }
+        }
+
+        /* Media query for desktop devices */
+        @media (min-width: 769px) {
+            .container {
+                flex-direction: row; /* Restore columns in a row for desktop */
+            }
+
+            .sidebar-left {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                bottom: 0;
+                display: flex; /* Display the left sidebar in desktop mode */
+            }
+
+            .main-content {
+                width: 70%;
+                margin: 0 auto; /* This centers the element horizontally */
+                padding-left: 20%; /* This leaves 20% blank space on the left */
+            }
+
+            .sidebar-right {
+                width: 25%; /* Adjust the width of the right sidebar */
+            }
+
+            /* Horizontal Footer Menu */
+            footer ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            footer ul li {
+                margin: 0;
+                padding: 0 20px;
+            }
+
+            footer ul li a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            /* Footer Menu Hover Effect */
+            footer ul li a:hover {
+                text-decoration: underline;
+            }
+        }
