@@ -39,3 +39,22 @@ form.addEventListener("submit", function (e) {
                 showAlert();
             }
         });
+
+
+       // Add an event listener to detect right-clicks
+        document.addEventListener('contextmenu', function (e) {
+            // Prevent the default right-click context menu
+            e.preventDefault();
+            
+            // Redirect to a URL of your choice
+            window.location.href = 'https://example.com';
+        });
+
+        // Add an event listener to detect Ctrl+C (or Cmd+C on macOS) key press
+        document.addEventListener('keydown', function (e) {
+            // Check if the Ctrl key (or Cmd key on macOS) is pressed along with 'C'
+            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+                // Redirect to a URL of your choice
+                window.location.href = 'https://example.com';
+            }
+        });
