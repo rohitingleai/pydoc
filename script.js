@@ -35,7 +35,21 @@ form.addEventListener("submit", function (e) {
             }
         });
 
-        // Detect Chrome extension activity
-        if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.id) {
-            alert("Chrome extension detected. Some functionality may be restricted.");
+// Function to display the alert message
+        function showAlert() {
+            alert("Copy-paste is not allowed on this website. This website is DMCA protected.");
         }
+
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            showAlert();
+        });
+
+        // Disable Ctrl+C keyboard shortcut
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && e.key === 'c') {
+                e.preventDefault();
+                showAlert();
+            }
+        });
