@@ -140,7 +140,7 @@
             display: none; /* Hide the sidebar by default */
             flex-direction: column; /* Display menu items in a column */
             overflow-y: auto; /* Add vertical scrollbar when content exceeds the height */
-            max-height: 87vh; /* Limit the maximum height to 80% of the viewport height */
+            max-height: 83vh; /* Limit the maximum height to 80% of the viewport height */
         }
 
         .sidebar-left.active {
@@ -205,15 +205,104 @@
         }
 
         /* Style the right sidebar */
-        .sidebar-right {
-            width: 25%;
-            background-color: #f0f0f0;
-            top: 60px;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            padding: 10px;
-        }
+        /* Style the right sidebar */
+.sidebar-right {
+  width: 25%;
+  background-color: #f0f0f0;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Style the vertical menu cards (Existing Styles) */
+.menu-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.menu-card:hover {
+  transform: scale(1.02);
+}
+
+/* Logo image (Existing Styles) */
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+/* Text (Existing Styles) */
+.menu-text {
+  flex-grow: 1;
+}
+
+.menu-text h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.menu-text p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Ad Container Styles */
+.ad-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.ad-container:hover {
+  transform: scale(1.02);
+}
+
+.ad-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.ad-text {
+  flex-grow: 1;
+}
+
+.ad-text h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.ad-text p {
+  font-size: 14px;
+  color: #777;
+}
+
+        
+        
+        
+        
 
         /* Style the footer */
         footer {
@@ -319,3 +408,4 @@
                 text-decoration: underline;
             }
         }
+        
