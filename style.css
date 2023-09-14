@@ -25,6 +25,44 @@
             max-width: 100%;
             height: auto;
         }
+        
+        
+        /* Style for the horizontal menu (displayed in desktop mode) */
+        ul.horizontal-menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        /* Style for each menu item */
+        li.horizontal-menu-item {
+            float: left;
+        }
+
+        /* Style for the menu item links */
+        li.horizontal-menu-item a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Style for the menu item links on hover */
+        li.horizontal-menu-item a:hover {
+            background-color: #555;
+        }
+
+        /* Media query to hide the menu in mobile mode */
+        @media (max-width: 768px) {
+            ul.horizontal-menu {
+                display: none;
+            }
+        }
+        
+        
 
         /* Style the search bar container */
         .search-container {
@@ -102,7 +140,7 @@
             display: none; /* Hide the sidebar by default */
             flex-direction: column; /* Display menu items in a column */
             overflow-y: auto; /* Add vertical scrollbar when content exceeds the height */
-            max-height: 86vh; /* Limit the maximum height to 80% of the viewport height */
+            max-height: 83vh; /* Limit the maximum height to 80% of the viewport height */
         }
 
         .sidebar-left.active {
@@ -139,7 +177,7 @@
             line-height: 1.4;
             text-align: justify;
         }
-
+        
         /* Style headings (h1, h2, h3, etc.) */
         .main-content h1 {
             font-size: 24px; /* Large heading font size */
@@ -155,7 +193,7 @@
             font-size: 19px; /* Small heading font size */
             margin-bottom: 10px;
         }
-
+        
         .main-content h4 {
             font-size: 17px; /* Small heading font size */
             margin-bottom: 10px;
@@ -165,13 +203,6 @@
         .main-content p {
             margin-bottom: 20px; /* Spacing between paragraphs */
         }
-
-
-
-
-
-
-
 
         /* Style the right sidebar */
         .sidebar-right {
