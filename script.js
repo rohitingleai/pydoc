@@ -21,20 +21,6 @@ form.addEventListener("submit", function (e) {
 
 
 
-
-
-// Disable right-click context menu
-        window.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-
-        // Disable copy and cut keyboard shortcuts
-        window.addEventListener('keydown', function (e) {
-            if (e.ctrlKey && (e.key === 'c' || e.key === 'x')) {
-                e.preventDefault();
-            }
-        });
-
 // Function to display the alert message
         function showAlert() {
             alert("Copy-paste is not allowed on this website. This website is DMCA protected.");
