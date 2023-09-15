@@ -5,6 +5,11 @@
             box-sizing: border-box;
         }
 
+        a {
+             text-decoration: none; /* Remove underline */
+             color: inherit; /* Use the parent element's text color */
+           }
+
         /* Style the header */
         header {
             background-color: #000000; /* Updated background color */
