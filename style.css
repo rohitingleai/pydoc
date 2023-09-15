@@ -154,7 +154,7 @@
             margin: 5px 0; /* Add space between menu items */
             background-color: #eee;
             padding: 12px;
-            font-size: 1.075em;
+            font-size: 1.275em;
         }
 
         .sidebar-left a:hover {
@@ -164,7 +164,7 @@
         .sidebar-left a.active {
             background-color: #000000;
             color: white;
-            font-size: 1.0em;
+            font-size: 1.34em;
         }
 
         /* Style the main content */
